@@ -1,4 +1,4 @@
-[![GitHub Action](https://github.com/matthiaskoenig/perfectkid/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/matthiaskoenig/perfectkid/actions/workflows/gh-pages.yml)/
+[![GitHub Action](https://github.com/matthiaskoenig/perfectkid/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/matthiaskoenig/perfectkid/actions/workflows/gh-pages.yml)
 
 # PERFECT-KID
 Project website for the project PERFECT-KID.
