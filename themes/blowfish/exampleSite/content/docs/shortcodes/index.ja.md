@@ -348,13 +348,13 @@ Blowfish も、標準の Markdown 構文を使用して含まれる画像の自�
 
 ```md
 {{</* gallery */>}}
-  <img src="gallery/01.jpg" class="grid-w33" />
-  <img src="gallery/02.jpg" class="grid-w33" />
-  <img src="gallery/03.jpg" class="grid-w33" />
-  <img src="gallery/04.jpg" class="grid-w33" />
-  <img src="gallery/05.jpg" class="grid-w33" />
-  <img src="gallery/06.jpg" class="grid-w33" />
-  <img src="gallery/07.jpg" class="grid-w33" />
+<img src="gallery/01.jpg" class="grid-w33" />
+<img src="gallery/02.jpg" class="grid-w33" />
+<img src="gallery/03.jpg" class="grid-w33" />
+<img src="gallery/04.jpg" class="grid-w33" />
+<img src="gallery/05.jpg" class="grid-w33" />
+<img src="gallery/06.jpg" class="grid-w33" />
+<img src="gallery/07.jpg" class="grid-w33" />
 {{</* /gallery */>}}
 ```
 

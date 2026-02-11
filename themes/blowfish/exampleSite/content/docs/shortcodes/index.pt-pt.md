@@ -9,22 +9,22 @@ series: ["Documentação"]
 series_order: 8
 ---
 
-Além de todos os [shortcodes padrão do Hugo](https://gohugo.io/content-management/shortcodes/), o Blowfish adiciona alguns extras para funcionalidades adicionais.
+Para além de todos os [shortcodes predefinidos do Hugo](https://gohugo.io/content-management/shortcodes/), o Blowfish adiciona alguns extras para funcionalidades adicionais.
 
 ## Alert
 
-`alert` exibe seu conteúdo como uma caixa de mensagem estilizada dentro do seu artigo. É útil para chamar a atenção para informações importantes que você não quer que o leitor perca.
+`alert` apresenta o seu conteúdo como uma caixa de mensagem estilizada dentro do seu artigo. É útil para chamar a atenção para informações importantes que não quer que o leitor perca.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição |
 | --- | --- |
-| `icon` | **Opcional.** O ícone a ser exibido no lado esquerdo.<br>**Padrão:** `triangle-exclamation` (Confira o [shortcode icon](#icon) para mais detalhes sobre o uso de ícones.) |
-| `iconColor` | **Opcional.** A cor do ícone em estilo CSS básico.<br>Pode ser valores hexadecimais (`#FFFFFF`) ou nomes de cores (`white`)<br>Por padrão escolhido com base no tema de cores atual. |
-| `cardColor` | **Opcional.** A cor do fundo do cartão em estilo CSS básico.<br>Pode ser valores hexadecimais (`#FFFFFF`) ou nomes de cores (`white`)<br>Por padrão escolhido com base no tema de cores atual. |
-| `textColor` | **Opcional.** A cor do texto em estilo CSS básico.<br>Pode ser valores hexadecimais (`#FFFFFF`) ou nomes de cores (`white`)<br>Por padrão escolhido com base no tema de cores atual. |
+| `icon` | **Opcional.** O ícone a apresentar no lado esquerdo.<br>**Predefinição:** `triangle-exclamation` (Consulte o [shortcode icon](#icon) para mais detalhes sobre a utilização de ícones.) |
+| `iconColor` | **Opcional.** A cor do ícone em estilo CSS básico.<br>Pode ser valores hexadecimais (`#FFFFFF`) ou nomes de cores (`white`)<br>Por predefinição escolhido com base no tema de cores atual. |
+| `cardColor` | **Opcional.** A cor do fundo do cartão em estilo CSS básico.<br>Pode ser valores hexadecimais (`#FFFFFF`) ou nomes de cores (`white`)<br>Por predefinição escolhido com base no tema de cores atual. |
+| `textColor` | **Opcional.** A cor do texto em estilo CSS básico.<br>Pode ser valores hexadecimais (`#FFFFFF`) ou nomes de cores (`white`)<br>Por predefinição escolhido com base no tema de cores atual. |
 <!-- prettier-ignore-end -->
 
-A entrada é escrita em Markdown, então você pode formatá-la como quiser.
+A entrada é escrita em Markdown, pelo que pode formatá-la como desejar.
 
 **Exemplo 1:** Sem parâmetros
 
@@ -42,12 +42,12 @@ A entrada é escrita em Markdown, então você pode formatá-la como quiser.
 
 ```md
 {{</* alert "twitter" */>}}
-Não esqueça de me [seguir](https://twitter.com/nunocoracao) no Twitter.
+Não te esqueças de me [seguir](https://twitter.com/nunocoracao) no Twitter.
 {{</* /alert */>}}
 ```
 
 {{< alert "twitter" >}}
-Não esqueça de me [seguir](https://twitter.com/nunocoracao) no Twitter.
+Não te esqueças de me [seguir](https://twitter.com/nunocoracao) no Twitter.
 {{< /alert >}}
 
 **Exemplo 3:** Parâmetros nomeados
@@ -66,9 +66,9 @@ Isto é um erro!
 
 ## Admonition
 
-Admonitions permitem que você insira caixas de chamada atraentes no seu conteúdo.
+As admonitions permitem-lhe inserir caixas de chamada atraentes no seu conteúdo.
 
-Admonitions servem um propósito similar ao shortcode alert, mas são implementadas via hooks de renderização do Hugo. A diferença principal é a sintaxe: admonitions usam sintaxe Markdown, tornando-as mais portáveis entre diferentes plataformas, enquanto shortcodes são específicos do Hugo. A sintaxe se assemelha aos alertas do GitHub:
+As admonitions servem um propósito semelhante ao shortcode alert, mas são implementadas através de hooks de renderização do Hugo. A diferença principal é a sintaxe: as admonitions utilizam sintaxe Markdown, tornando-as mais portáveis entre diferentes plataformas, enquanto os shortcodes são específicos do Hugo. A sintaxe assemelha-se aos alertas do GitHub:
 
 ```md
 > [!NOTE]
@@ -96,14 +96,14 @@ O sinal de alerta (`+` ou `-`) é opcional para controlar se a admonition está 
 
 ## Article
 
-`Article` incorporará um único artigo em um arquivo markdown. O `link` para o arquivo deve ser o `.RelPermalink` do arquivo a ser incorporado. Note que o shortcode não exibirá nada se estiver referenciando sua página pai. _Nota: se você está executando seu site em uma subpasta como o Blowfish (ou seja, /blowfish/), inclua esse caminho no link._
+`Article` incorporará um único artigo num ficheiro markdown. O `link` para o ficheiro deve ser o `.RelPermalink` do ficheiro a incorporar. Note que o shortcode não apresentará nada se estiver a referenciar a sua página pai. _Nota: se está a executar o seu site numa subpasta como o Blowfish (ou seja, /blowfish/), inclua esse caminho no link._
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                              |
 | --------- | -------------------------------------------------------- |
 | `link`    | **Obrigatório.** O `.RelPermalink` para o artigo alvo. |
-| `showSummary` | **Opcional.** Um valor booleano indicando se deve mostrar o resumo do artigo. Se não definido, a configuração padrão do site será usada. |
-| `compactSummary` | **Opcional.** Um valor booleano indicando se deve exibir o resumo em modo compacto. Padrão é false. |
+| `showSummary` | **Opcional.** Um valor booleano que indica se deve mostrar o resumo do artigo. Se não definido, a configuração predefinida do site será utilizada. |
+| `compactSummary` | **Opcional.** Um valor booleano que indica se deve apresentar o resumo em modo compacto. Predefinição é false. |
 <!-- prettier-ignore-end -->
 
 **Exemplo:**
@@ -118,7 +118,7 @@ O sinal de alerta (`+` ou `-`) é opcional para controlar se a admonition está 
 
 ## Badge
 
-`badge` exibe um componente de badge estilizado que é útil para exibir metadados.
+`badge` apresenta um componente de badge estilizado que é útil para apresentar metadados.
 
 **Exemplo:**
 
@@ -136,7 +136,7 @@ Novo artigo!
 
 ## Button
 
-`button` exibe um componente de botão estilizado que pode ser usado para destacar uma ação principal. Tem três variáveis opcionais `href`, `target` e `rel` que podem ser usadas para especificar a URL, o destino e a relação do link.
+`button` apresenta um componente de botão estilizado que pode ser utilizado para destacar uma ação principal. Tem três variáveis opcionais `href`, `target` e `rel` que podem ser utilizadas para especificar o URL, o destino e a relação do link.
 
 **Exemplo:**
 
@@ -154,17 +154,17 @@ Chamada para ação
 
 ## Carousel
 
-`carousel` é usado para exibir múltiplas imagens de forma interativa e visualmente atraente. Isso permite que um usuário deslize através de múltiplas imagens enquanto ocupa apenas o espaço vertical de uma. Todas as imagens são exibidas usando a largura total do componente pai e a proporção de aspecto que você definir, com um padrão de `16:9`.
+`carousel` é utilizado para apresentar múltiplas imagens de forma interativa e visualmente atraente. Isto permite que um utilizador deslize através de múltiplas imagens enquanto ocupa apenas o espaço vertical de uma. Todas as imagens são apresentadas utilizando a largura total do componente pai e a proporção de aspeto que definir, com uma predefinição de `16:9`.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição |
 | --- | --- |
 | `images` | **Obrigatório.** Uma string regex para corresponder nomes ou URLs de imagens. |
-| `aspectRatio` | **Opcional.** A proporção de aspecto para o carrossel. Por padrão `16-9`. |
-| `interval` | **Opcional.** O intervalo para a rolagem automática, especificado em milissegundos. Padrão é `2000` (2s) |
+| `aspectRatio` | **Opcional.** A proporção de aspeto para o carrossel. Por predefinição `16-9`. |
+| `interval` | **Opcional.** O intervalo para a rolagem automática, especificado em milissegundos. Predefinição é `2000` (2s) |
 <!-- prettier-ignore-end -->
 
-**Exemplo 1:** Proporção de aspecto 16:9 e lista de imagens detalhada
+**Exemplo 1:** Proporção de aspeto 16:9 e lista de imagens detalhada
 
 ```md
 {{</* carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg,gallery/03.jpg,gallery/01.jpg,gallery/02.jpg,gallery/04.jpg}" */>}}
@@ -172,7 +172,7 @@ Chamada para ação
 
 {{< carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg,gallery/03.jpg,gallery/01.jpg,gallery/02.jpg,gallery/04.jpg}" >}}
 
-**Exemplo 2:** Proporção de aspecto 21:9 e lista de imagens com regex
+**Exemplo 2:** Proporção de aspeto 21:9 e lista de imagens com regex
 
 ```md
 {{</* carousel images="gallery/*" aspectRatio="21-9" interval="2500" */>}}
@@ -184,7 +184,7 @@ Chamada para ação
 
 ## Chart
 
-`chart` usa a biblioteca Chart.js para incorporar gráficos em artigos usando dados estruturados simples. Suporta vários [estilos de gráficos diferentes](https://www.chartjs.org/docs/latest/samples/) e tudo pode ser configurado a partir do shortcode. Simplesmente forneça os parâmetros do gráfico entre as tags do shortcode e o Chart.js fará o resto.
+`chart` utiliza a biblioteca Chart.js para incorporar gráficos em artigos utilizando dados estruturados simples. Suporta vários [estilos de gráficos diferentes](https://www.chartjs.org/docs/latest/samples/) e tudo pode ser configurado a partir do shortcode. Basta fornecer os parâmetros do gráfico entre as tags do shortcode e o Chart.js fará o resto.
 
 Consulte a [documentação oficial do Chart.js](https://www.chartjs.org/docs/latest/general/) para detalhes sobre sintaxe e tipos de gráficos suportados.
 
@@ -216,7 +216,7 @@ data: {
 {{< /chart >}}
 <!-- prettier-ignore-end -->
 
-Você pode ver exemplos adicionais do Chart.js na página de [exemplos de gráficos]({{< ref "charts" >}}).
+Pode ver exemplos adicionais do Chart.js na página de [exemplos de gráficos]({{< ref "charts" >}}).
 
 <br/><br/><br/>
 
@@ -227,8 +227,8 @@ Este shortcode permite importar código de fontes externas facilmente sem copiar
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                             |
 | --------- | ------------------------------------------------------- |
-| `url`     | **Obrigatório** URL para um arquivo de código hospedado externamente.     |
-| `type`    | Tipo de código usado para destaque de sintaxe.                 |
+| `url`     | **Obrigatório** URL para um ficheiro de código alojado externamente.     |
+| `type`    | Tipo de código utilizado para destaque de sintaxe.                 |
 | `startLine` | **Opcional** O número da linha para começar a importação.    |
 | `endLine` | **Opcional** O número da linha para terminar a importação.        |
 
@@ -254,12 +254,12 @@ Este shortcode permite importar código de fontes externas facilmente sem copiar
 
 ## Codeberg Card
 
-`codeberg` permite que você vincule rapidamente um repositório Codeberg através da API do Codeberg, fornecendo atualizações em tempo real sobre estatísticas como estrelas e forks.
+`codeberg` permite-lhe vincular rapidamente um repositório Codeberg através da API do Codeberg, fornecendo atualizações em tempo real sobre estatísticas como estrelas e forks.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                           |
 | --------- | ----------------------------------------------------- |
-| `repo`    | [String] repositório Codeberg no formato `usuário/repo` |
+| `repo`    | [String] repositório Codeberg no formato `utilizador/repo` |
 <!-- prettier-ignore-end -->
 
 **Exemplo 1:**
@@ -276,24 +276,24 @@ Este shortcode permite importar código de fontes externas facilmente sem copiar
 
 O Blowfish inclui um shortcode `figure` para adicionar imagens ao conteúdo. O shortcode substitui a funcionalidade base do Hugo para fornecer benefícios de desempenho adicionais.
 
-Quando uma imagem fornecida é um recurso de página, ela será otimizada usando Hugo Pipes e escalada para fornecer imagens apropriadas para diferentes resoluções de dispositivos. Se um asset estático ou URL para uma imagem externa for fornecido, será incluído como está sem nenhum processamento de imagem pelo Hugo.
+Quando uma imagem fornecida é um recurso de página, será otimizada utilizando Hugo Pipes e escalada para fornecer imagens apropriadas para diferentes resoluções de dispositivos. Se um asset estático ou URL para uma imagem externa for fornecido, será incluído tal como está sem nenhum processamento de imagem pelo Hugo.
 
 O shortcode `figure` aceita seis parâmetros:
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição |
 | --- | --- |
-| `src` | **Obrigatório.** O caminho/nome de arquivo local ou URL da imagem. Ao fornecer um caminho e nome de arquivo, o tema tentará localizar a imagem usando a seguinte ordem de busca: Primeiro, como um [recurso de página](https://gohugo.io/content-management/page-resources/) empacotado com a página; depois um asset no diretório `assets/`; e finalmente, uma imagem estática no diretório `static/`. |
+| `src` | **Obrigatório.** O caminho/nome de ficheiro local ou URL da imagem. Ao fornecer um caminho e nome de ficheiro, o tema tentará localizar a imagem utilizando a seguinte ordem de pesquisa: Primeiro, como um [recurso de página](https://gohugo.io/content-management/page-resources/) empacotado com a página; depois um asset no diretório `assets/`; e finalmente, uma imagem estática no diretório `static/`. |
 | `alt` | [Descrição de texto alternativo](https://moz.com/learn/seo/alt-text) para a imagem. |
-| `caption` | Markdown para a legenda da imagem, que será exibida abaixo da imagem. |
+| `caption` | Markdown para a legenda da imagem, que será apresentada abaixo da imagem. |
 | `class` | Classes CSS adicionais para aplicar à imagem. |
-| `href` | URL para a qual a imagem deve linkar. |
-| `target` | O atributo target para a URL `href`. |
-| `nozoom` | `nozoom=true` desativa a funcionalidade de "zoom" da imagem. Isso é especialmente útil em combinação com um link `href`. |
-| `default` | Parâmetro especial para reverter ao comportamento padrão do `figure` do Hugo. Simplesmente forneça `default=true` e então use a [sintaxe normal de shortcode do Hugo](https://gohugo.io/content-management/shortcodes/#figure). |
+| `href` | URL para a qual a imagem deve ligar. |
+| `target` | O atributo target para o URL `href`. |
+| `nozoom` | `nozoom=true` desativa a funcionalidade de "zoom" da imagem. Isto é especialmente útil em combinação com um link `href`. |
+| `default` | Parâmetro especial para reverter ao comportamento predefinido do `figure` do Hugo. Basta fornecer `default=true` e depois utilizar a [sintaxe normal de shortcode do Hugo](https://gohugo.io/content-management/shortcodes/#figure). |
 <!-- prettier-ignore-end -->
 
-O Blowfish também suporta conversão automática de imagens incluídas usando sintaxe Markdown padrão. Simplesmente use o seguinte formato e o tema cuidará do resto:
+O Blowfish também suporta conversão automática de imagens incluídas utilizando sintaxe Markdown padrão. Basta utilizar o seguinte formato e o tema tratará do resto:
 
 ```md
 ![Texto alternativo](image.jpg "Legenda da imagem")
@@ -319,12 +319,12 @@ O Blowfish também suporta conversão automática de imagens incluídas usando s
 
 ## Forgejo Card
 
-`forgejo` permite que você vincule rapidamente um repositório Forgejo através da API do Forgejo, fornecendo atualizações em tempo real sobre estatísticas como estrelas e forks.
+`forgejo` permite-lhe vincular rapidamente um repositório Forgejo através da API do Forgejo, fornecendo atualizações em tempo real sobre estatísticas como estrelas e forks.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                           |
 | --------- | ----------------------------------------------------- |
-| `repo`    | [String] repositório Forgejo no formato `usuário/repo`|
+| `repo`    | [String] repositório Forgejo no formato `utilizador/repo`|
 | `server`  | [String] URL do servidor como `https://v11.next.forgejo.org`|
 <!-- prettier-ignore-end -->
 
@@ -340,21 +340,21 @@ O Blowfish também suporta conversão automática de imagens incluídas usando s
 
 ## Gallery
 
-`gallery` permite que você exiba múltiplas imagens de uma vez, de forma responsiva com layouts mais variados e interessantes.
+`gallery` permite-lhe apresentar múltiplas imagens de uma vez, de forma responsiva com layouts mais variados e interessantes.
 
-Para adicionar imagens à galeria, use tags `img` para cada imagem e adicione `class="grid-wXX"` para que a galeria possa identificar a largura da coluna para cada imagem. As larguras disponíveis por padrão começam em 10% e vão até 100% em incrementos de 5%. Por exemplo, para definir a largura em 65%, defina a classe como `grid-w65`. Além disso, larguras para 33% e 66% também estão disponíveis para construir galerias de 3 colunas. Você também pode aproveitar os indicadores responsivos do Tailwind para ter uma grade responsiva.
+Para adicionar imagens à galeria, utilize tags `img` para cada imagem e adicione `class="grid-wXX"` para que a galeria possa identificar a largura da coluna para cada imagem. As larguras disponíveis por predefinição começam em 10% e vão até 100% em incrementos de 5%. Por exemplo, para definir a largura em 65%, defina a classe como `grid-w65`. Além disso, larguras para 33% e 66% também estão disponíveis para construir galerias de 3 colunas. Também pode aproveitar os indicadores responsivos do Tailwind para ter uma grelha responsiva.
 
 **Exemplo 1: Galeria normal**
 
 ```md
 {{</* gallery */>}}
-  <img src="gallery/01.jpg" class="grid-w33" />
-  <img src="gallery/02.jpg" class="grid-w33" />
-  <img src="gallery/03.jpg" class="grid-w33" />
-  <img src="gallery/04.jpg" class="grid-w33" />
-  <img src="gallery/05.jpg" class="grid-w33" />
-  <img src="gallery/06.jpg" class="grid-w33" />
-  <img src="gallery/07.jpg" class="grid-w33" />
+<img src="gallery/01.jpg" class="grid-w33" />
+<img src="gallery/02.jpg" class="grid-w33" />
+<img src="gallery/03.jpg" class="grid-w33" />
+<img src="gallery/04.jpg" class="grid-w33" />
+<img src="gallery/05.jpg" class="grid-w33" />
+<img src="gallery/06.jpg" class="grid-w33" />
+<img src="gallery/07.jpg" class="grid-w33" />
 {{</* /gallery */>}}
 ```
 
@@ -398,13 +398,13 @@ Para adicionar imagens à galeria, use tags `img` para cada imagem e adicione `c
 
 ## Gist
 
-O shortcode `gist` permite que você incorpore um GitHub Gist diretamente no seu conteúdo especificando o usuário do Gist, ID e opcionalmente um arquivo específico.
+O shortcode `gist` permite-lhe incorporar um GitHub Gist diretamente no seu conteúdo especificando o utilizador do Gist, ID e opcionalmente um ficheiro específico.
 
 | Parâmetro      | Descrição                                                        |
 | -------------- | ------------------------------------------------------------------ |
-| `[0]`          | [String] Nome de usuário do GitHub                                           |
+| `[0]`          | [String] Nome de utilizador do GitHub                                           |
 | `[1]`          | [String] ID do Gist                                                   |
-| `[2]` (opcional)| [String] Nome do arquivo dentro do Gist para incorporar (opcional)             |
+| `[2]` (opcional)| [String] Nome do ficheiro dentro do Gist para incorporar (opcional)             |
 
 **Exemplo 1: Incorporar Gist inteiro**
 
@@ -414,7 +414,7 @@ O shortcode `gist` permite que você incorpore um GitHub Gist diretamente no seu
 
 {{< gist "octocat" "6cad326836d38bd3a7ae" >}}
 
-**Exemplo 2: Incorporar arquivo específico do Gist**
+**Exemplo 2: Incorporar ficheiro específico do Gist**
 
 ```md
 {{</* gist "rauchg" "2052694" "README.md" */>}}
@@ -426,12 +426,12 @@ O shortcode `gist` permite que você incorpore um GitHub Gist diretamente no seu
 
 ## Gitea Card
 
-`gitea` permite que você vincule rapidamente um repositório Gitea através da API do Gitea, fornecendo atualizações em tempo real sobre estatísticas como estrelas e forks.
+`gitea` permite-lhe vincular rapidamente um repositório Gitea através da API do Gitea, fornecendo atualizações em tempo real sobre estatísticas como estrelas e forks.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                           |
 | --------- | ----------------------------------------------------- |
-| `repo`    | [String] repositório Gitea no formato `usuário/repo`  |
+| `repo`    | [String] repositório Gitea no formato `utilizador/repo`  |
 | `server`  | [String] URL do servidor como `https://git.fsfe.org`       |
 <!-- prettier-ignore-end -->
 
@@ -447,13 +447,13 @@ O shortcode `gist` permite que você incorpore um GitHub Gist diretamente no seu
 
 ## GitHub Card
 
-`github` permite que você vincule rapidamente um repositório GitHub, enquanto exibe e atualiza em tempo real as estatísticas sobre ele, como o número de estrelas e forks.
+`github` permite-lhe vincular rapidamente um repositório GitHub, enquanto apresenta e atualiza em tempo real as estatísticas sobre ele, como o número de estrelas e forks.
 
 <!-- prettier-ignore-start -->
 | Parâmetro       | Descrição                                                   |
 |-----------------|---------------------------------------------------------------|
-| `repo`          | [String] repositório GitHub no formato `usuário/repo`         |
-| `showThumbnail` | **Opcional** [boolean] exibe uma miniatura para o repositório |
+| `repo`          | [String] repositório GitHub no formato `utilizador/repo`         |
+| `showThumbnail` | **Opcional** [boolean] apresenta uma miniatura para o repositório |
 <!-- prettier-ignore-end -->
 
 **Exemplo 1:**
@@ -468,16 +468,16 @@ O shortcode `gist` permite que você incorpore um GitHub Gist diretamente no seu
 
 ## GitLab Card
 
-`gitlab` permite que você vincule rapidamente um Projeto GitLab (jargão do GitLab para repositório).
-Ele exibe estatísticas em tempo real sobre ele, como o número de estrelas e forks.
-Diferente do `github`, não pode exibir a linguagem de programação principal de um projeto.
-Por fim, uma URL de instância GitLab personalizada pode ser fornecida, desde que o endpoint `api/v4/projects/` esteja disponível, tornando este shortcode compatível com a maioria dos deployments auto-hospedados / empresariais.
+`gitlab` permite-lhe vincular rapidamente um Projeto GitLab (jargão do GitLab para repositório).
+Apresenta estatísticas em tempo real sobre ele, como o número de estrelas e forks.
+Ao contrário do `github`, não consegue apresentar a linguagem de programação principal de um projeto.
+Por fim, pode ser fornecido um URL de instância GitLab personalizado, desde que o endpoint `api/v4/projects/` esteja disponível, tornando este shortcode compatível com a maioria dos deployments auto-alojados / empresariais.
 
 <!-- prettier-ignore-start -->
 | Parâmetro   | Descrição                                                             |
 | ----------- | ----------------------------------------------------------------------- |
 | `projectID` | [String] ID numérico do projeto GitLab                                       |
-| `baseURL`   | [String] URL opcional da instância GitLab, padrão é `https://gitlab.com/` |
+| `baseURL`   | [String] URL opcional da instância GitLab, predefinição é `https://gitlab.com/` |
 <!-- prettier-ignore-end -->
 
 **Exemplo 1:**
@@ -492,14 +492,14 @@ Por fim, uma URL de instância GitLab personalizada pode ser fornecida, desde qu
 
 ## Hugging Face Card
 
-`huggingface` permite que você vincule rapidamente um modelo ou dataset do Hugging Face, exibindo informações em tempo real como o número de likes e downloads, junto com tipo e descrição.
+`huggingface` permite-lhe vincular rapidamente um modelo ou dataset do Hugging Face, apresentando informações em tempo real como o número de likes e downloads, juntamente com tipo e descrição.
 
 | Parâmetro  | Descrição                                                    |
 |------------|----------------------------------------------------------------|
-| `model`    | [String] Modelo do Hugging Face no formato `usuário/modelo` |
-| `dataset`  | [String] Dataset do Hugging Face no formato `usuário/dataset` |
+| `model`    | [String] Modelo do Hugging Face no formato `utilizador/modelo` |
+| `dataset`  | [String] Dataset do Hugging Face no formato `utilizador/dataset` |
 
-**Nota:** Use o parâmetro `model` ou `dataset`, não ambos.
+**Nota:** Utilize o parâmetro `model` ou `dataset`, não ambos.
 
 **Exemplo 1 (Modelo):**
 
@@ -521,7 +521,7 @@ Por fim, uma URL de instância GitLab personalizada pode ser fornecida, desde qu
 
 ## Icon
 
-`icon` exibe um ícone SVG e recebe o nome do ícone como seu único parâmetro. O ícone é escalado para corresponder ao tamanho do texto atual.
+`icon` apresenta um ícone SVG e recebe o nome do ícone como único parâmetro. O ícone é escalado para corresponder ao tamanho do texto atual.
 
 **Exemplo:**
 
@@ -531,21 +531,21 @@ Por fim, uma URL de instância GitLab personalizada pode ser fornecida, desde qu
 
 **Saída:** {{< icon "github" >}}
 
-Os ícones são preenchidos usando pipelines do Hugo, o que os torna muito flexíveis. O Blowfish inclui vários ícones integrados para redes sociais, links e outros propósitos. Confira a página de [exemplos de ícones]({{< ref "samples/icons" >}}) para uma lista completa dos ícones suportados.
+Os ícones são preenchidos utilizando pipelines do Hugo, o que os torna muito flexíveis. O Blowfish inclui vários ícones integrados para redes sociais, ligações e outros propósitos. Consulte a página de [exemplos de ícones]({{< ref "samples/icons" >}}) para uma lista completa dos ícones suportados.
 
-Ícones personalizados podem ser adicionados fornecendo seus próprios assets de ícones no diretório `assets/icons/` do seu projeto. O ícone pode então ser referenciado no shortcode usando o nome do arquivo SVG sem a extensão `.svg`.
+Ícones personalizados podem ser adicionados fornecendo os seus próprios assets de ícones no diretório `assets/icons/` do seu projeto. O ícone pode então ser referenciado no shortcode utilizando o nome do ficheiro SVG sem a extensão `.svg`.
 
-Ícones também podem ser usados em partials chamando o [partial icon]({{< ref "partials#icon" >}}).
+Ícones também podem ser utilizados em partials chamando o [partial icon]({{< ref "partials#icon" >}}).
 
 <br/><br/><br/>
 
 ## KaTeX
 
-O shortcode `katex` pode ser usado para adicionar expressões matemáticas ao conteúdo de artigos usando o pacote KaTeX. Consulte a referência online de [funções TeX suportadas](https://katex.org/docs/supported.html) para a sintaxe disponível.
+O shortcode `katex` pode ser utilizado para adicionar expressões matemáticas ao conteúdo de artigos utilizando o pacote KaTeX. Consulte a referência online de [funções TeX suportadas](https://katex.org/docs/supported.html) para a sintaxe disponível.
 
-Para incluir expressões matemáticas em um artigo, simplesmente coloque o shortcode em qualquer lugar do conteúdo. Ele só precisa ser incluído uma vez por artigo e o KaTeX renderizará automaticamente qualquer markup nessa página. Tanto a notação inline quanto em bloco são suportadas.
+Para incluir expressões matemáticas num artigo, basta colocar o shortcode em qualquer lugar do conteúdo. Só precisa de ser incluído uma vez por artigo e o KaTeX renderizará automaticamente qualquer markup nessa página. Tanto a notação inline como em bloco são suportadas.
 
-A notação inline pode ser gerada envolvendo a expressão com os delimitadores `\(` e `\)`. Alternativamente, a notação em bloco pode ser gerada usando delimitadores `$$`.
+A notação inline pode ser gerada envolvendo a expressão com os delimitadores `\(` e `\)`. Alternativamente, a notação em bloco pode ser gerada utilizando delimitadores `$$`.
 
 **Exemplo:**
 
@@ -557,82 +557,82 @@ A notação inline pode ser gerada envolvendo a expressão com os delimitadores 
 {{< katex >}}
 \(f(a,b,c) = (a^2+b^2+c^2)^3\)
 
-Confira a página de [exemplos de notação matemática]({{< ref "mathematical-notation" >}}) para mais exemplos.
+Consulte a página de [exemplos de notação matemática]({{< ref "mathematical-notation" >}}) para mais exemplos.
 
 <br/><br/><br/>
 
 ## Keyword
 
-O componente `keyword` pode ser usado para destacar visualmente certas palavras ou frases importantes, por exemplo, habilidades profissionais, etc. O shortcode `keywordList` pode ser usado para agrupar múltiplos itens `keyword`. Cada item pode ter as seguintes propriedades.
+O componente `keyword` pode ser utilizado para destacar visualmente certas palavras ou frases importantes, por exemplo, competências profissionais, etc. O shortcode `keywordList` pode ser utilizado para agrupar múltiplos itens `keyword`. Cada item pode ter as seguintes propriedades.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                             |
 | --------- | --------------------------------------- |
-| `icon`    | Ícone opcional a ser usado no keyword |
+| `icon`    | Ícone opcional a utilizar no keyword |
 <!-- prettier-ignore-end -->
 
-A entrada é escrita em Markdown, então você pode formatá-la como quiser.
+A entrada é escrita em Markdown, pelo que pode formatá-la como desejar.
 
 **Exemplo 1:**
 
 ```md
-{{</* keyword */>}} *Super* habilidade {{</* /keyword */>}}
+{{</* keyword */>}} *Super* competência {{</* /keyword */>}}
 ```
 
-{{< keyword >}} _Super_ habilidade {{< /keyword >}}
+{{< keyword >}} _Super_ competência {{< /keyword >}}
 
 **Exemplo 2:**
 
 ```md
 {{</* keywordList */>}}
 {{</* keyword icon="github" */>}} Lorem ipsum dolor. {{</* /keyword */>}}
-{{</* keyword icon="code" */>}} Habilidade **importante** {{</* /keyword */>}}
+{{</* keyword icon="code" */>}} Competência **importante** {{</* /keyword */>}}
 {{</* /keywordList */>}}
 
-{{</* keyword */>}} Habilidade *independente* {{</* /keyword */>}}
+{{</* keyword */>}} Competência *independente* {{</* /keyword */>}}
 ```
 
 {{< keywordList >}}
 {{< keyword icon="github" >}} Lorem ipsum dolor {{< /keyword >}}
-{{< keyword icon="code" >}} Habilidade **importante** {{< /keyword >}}
+{{< keyword icon="code" >}} Competência **importante** {{< /keyword >}}
 {{< /keywordList >}}
-{{< keyword >}} Habilidade _independente_ {{< /keyword >}}
+{{< keyword >}} Competência _independente_ {{< /keyword >}}
 
 <br/><br/><br/>
 
 ## Lead
 
-`lead` é usado para dar ênfase ao início de um artigo. Pode ser usado para estilizar uma introdução ou para chamar a atenção para uma informação importante. Simplesmente envolva qualquer conteúdo Markdown no shortcode `lead`.
+`lead` é utilizado para dar ênfase ao início de um artigo. Pode ser utilizado para estilizar uma introdução ou para chamar a atenção para uma informação importante. Basta envolver qualquer conteúdo Markdown no shortcode `lead`.
 
 **Exemplo:**
 
 ```md
 {{</* lead */>}}
-Quando a vida te der limões, faça limonada.
+Quando a vida te der limões, faz limonada.
 {{</* /lead */>}}
 ```
 
 {{< lead >}}
-Quando a vida te der limões, faça limonada.
+Quando a vida te der limões, faz limonada.
 {{< /lead >}}
 
 <br/><br/><br/>
 
 ## List
 
-`List` exibirá uma lista de artigos recentes. Este shortcode requer um valor limite para restringir a lista. Além disso, suporta um `where` e um `value` para filtrar artigos por seus parâmetros. Note que este shortcode não exibirá sua página pai, mas ela contará para o valor limite.
+`List` apresentará uma lista de artigos recentes. Este shortcode requer um valor limite para restringir a lista. Além disso, suporta um `where` e um `value` para filtrar artigos pelos seus parâmetros. Note que este shortcode não apresentará a sua página pai, mas ela contará para o valor limite.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição |
 | --- | --- |
-| `limit` | **Obrigatório.** O número de artigos recentes a exibir. |
-| `title` | Título opcional para a lista, padrão é `Recent` |
-| `cardView` | Visualização em cartão opcional habilitada para a lista, padrão é `false` |
-| `where` | A variável a ser usada para a consulta de artigos, por exemplo `Type` |
+| `limit` | **Obrigatório.** O número de artigos recentes a apresentar. |
+| `title` | Título opcional para a lista, predefinição é `Recent` |
+| `cardView` | Visualização em cartão opcional ativada para a lista, predefinição é `false` |
+| `where` | A variável a utilizar para a consulta de artigos, por exemplo `Type` |
 | `value` | O valor que precisará corresponder ao parâmetro definido em `where` para a consulta de artigos, por exemplo para `where` == `Type` um valor válido poderia ser `sample` |
 
 {{< alert >}}
-Os valores `where` e `value` são usados na seguinte consulta `where .Site.RegularPages $where $value` no código do shortcode. Consulte os [docs do Hugo](https://gohugo.io/methods/page/) para saber mais sobre quais parâmetros estão disponíveis.
+Os valores `where` e `value` são utilizados na seguinte consulta `where .Site.RegularPages $where $value` no código do shortcode. Consulte os [docs do Hugo](https://gohugo.io/methods/page/) para saber mais sobre quais parâmetros estão disponíveis.
 {{</ alert >}}
 
 <!-- prettier-ignore-end -->
@@ -657,13 +657,13 @@ Os valores `where` e `value` são usados na seguinte consulta `where .Site.Regul
 
 ## LTR/RTL
 
-`ltr` e `rtl` permitem que você misture seus conteúdos. Muitos usuários de idiomas RTL querem incluir partes do conteúdo em LTR. Usando este shortcode você poderá fazer isso, e ao aproveitar `%` como o delimitador mais externo no shortcode [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown), qualquer markdown dentro será renderizado normalmente.
+`ltr` e `rtl` permitem-lhe misturar os seus conteúdos. Muitos utilizadores de idiomas RTL querem incluir partes do conteúdo em LTR. Utilizando este shortcode poderá fazê-lo, e ao aproveitar `%` como o delimitador mais externo no shortcode [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown), qualquer markdown dentro será renderizado normalmente.
 
 **Exemplo:**
 
 ```md
 - Esta é uma lista markdown.
-- Por padrão direção LTR
+- Por predefinição direção LTR
 {{%/* rtl */%}}
 - هذه القائمة باللغة العربية
 - من اليمين الى اليسار
@@ -671,7 +671,7 @@ Os valores `where` e `value` são usados na seguinte consulta `where .Site.Regul
 ```
 
 - Esta é uma lista markdown.
-- Por padrão direção LTR
+- Por predefinição direção LTR
 {{% rtl %}}
 - هذه القائمة باللغة العربية
 - من اليمين الى اليسار
@@ -681,12 +681,12 @@ Os valores `where` e `value` são usados na seguinte consulta `where .Site.Regul
 
 ## Markdown Importer
 
-Este shortcode permite que você importe arquivos markdown de fontes externas. Isso é útil para incluir conteúdo de outros repositórios ou sites sem ter que copiar e colar o conteúdo.
+Este shortcode permite-lhe importar ficheiros markdown de fontes externas. Isto é útil para incluir conteúdo de outros repositórios ou sites sem ter de copiar e colar o conteúdo.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                             |
 | --------- | ------------------------------------------------------- |
-| `url`     | **Obrigatório** URL para um arquivo markdown hospedado externamente. |
+| `url`     | **Obrigatório** URL para um ficheiro markdown alojado externamente. |
 
 <!-- prettier-ignore-end -->
 
@@ -703,9 +703,9 @@ Este shortcode permite que você importe arquivos markdown de fontes externas. I
 
 ## Mermaid
 
-`mermaid` permite que você desenhe diagramas e visualizações detalhadas usando texto. Ele usa o Mermaid por baixo e suporta uma ampla variedade de diagramas, gráficos e outros formatos de saída.
+`mermaid` permite-lhe desenhar diagramas e visualizações detalhadas utilizando texto. Utiliza o Mermaid por baixo e suporta uma ampla variedade de diagramas, gráficos e outros formatos de saída.
 
-Simplesmente escreva sua sintaxe Mermaid dentro do shortcode `mermaid` e deixe o plugin fazer o resto.
+Basta escrever a sua sintaxe Mermaid dentro do shortcode `mermaid` e deixar o plugin fazer o resto.
 
 Consulte a [documentação oficial do Mermaid](https://mermaid-js.github.io/) para detalhes sobre sintaxe e tipos de diagramas suportados.
 
@@ -725,13 +725,13 @@ A[Lemons]-->B[Lemonade];
 B-->C[Profit]
 {{< /mermaid >}}
 
-Você pode ver exemplos adicionais do Mermaid na página de [exemplos de diagramas e fluxogramas]({{< ref "diagrams-flowcharts" >}}).
+Pode ver exemplos adicionais do Mermaid na página de [exemplos de diagramas e fluxogramas]({{< ref "diagrams-flowcharts" >}}).
 
 <br/><br/><br/>
 
 ## Swatches
 
-`swatches` exibe um conjunto de até três cores diferentes para mostrar elementos de cor como uma paleta de cores. Este shortcode recebe os códigos `HEX` de cada cor e cria os elementos visuais para cada uma.
+`swatches` apresenta um conjunto de até três cores diferentes para mostrar elementos de cor como uma paleta de cores. Este shortcode recebe os códigos `HEX` de cada cor e cria os elementos visuais para cada uma.
 
 **Exemplo**
 
@@ -746,7 +746,7 @@ Você pode ver exemplos adicionais do Mermaid na página de [exemplos de diagram
 
 ## Tabs
 
-O shortcode `tabs` é comumente usado para apresentar diferentes variantes de uma etapa específica. Por exemplo, pode ser usado para mostrar como instalar o VS Code em diferentes plataformas.
+O shortcode `tabs` é comummente utilizado para apresentar diferentes variantes de uma etapa específica. Por exemplo, pode ser utilizado para mostrar como instalar o VS Code em diferentes plataformas.
 
 **Exemplo**
 
@@ -754,13 +754,13 @@ O shortcode `tabs` é comumente usado para apresentar diferentes variantes de um
 {{</* tabs */>}}
 
     {{</* tab label="Windows" */>}}
-    Instalar usando Chocolatey:
+    Instalar utilizando Chocolatey:
 
     ```pwsh
     choco install vscode.install
     ```
 
-    ou instalar usando WinGet
+    ou instalar utilizando WinGet
 
     ```pwsh
     winget install -e --id Microsoft.VisualStudioCode
@@ -774,7 +774,7 @@ O shortcode `tabs` é comumente usado para apresentar diferentes variantes de um
     {{</* /tab */>}}
 
     {{</* tab label="Linux" */>}}
-    Veja a [documentação](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux).
+    Consulte a [documentação](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux).
     {{</* /tab */>}}
 
 {{</* /tabs */>}}
@@ -785,13 +785,13 @@ O shortcode `tabs` é comumente usado para apresentar diferentes variantes de um
 {{< tabs >}}
 
     {{< tab label="Windows" >}}
-    Instalar usando Chocolatey:
+    Instalar utilizando Chocolatey:
 
     ```pwsh
     choco install vscode.install
     ```
 
-    ou instalar usando WinGet
+    ou instalar utilizando WinGet
 
     ```pwsh
     winget install -e --id Microsoft.VisualStudioCode
@@ -805,7 +805,7 @@ O shortcode `tabs` é comumente usado para apresentar diferentes variantes de um
     {{< /tab >}}
 
     {{< tab label="Linux" >}}
-    Veja a [documentação](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux).
+    Consulte a [documentação](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux).
     {{< /tab >}}
 
 {{< /tabs >}}
@@ -814,13 +814,13 @@ O shortcode `tabs` é comumente usado para apresentar diferentes variantes de um
 
 ## Timeline
 
-O `timeline` cria uma linha do tempo visual que pode ser usada em diferentes casos de uso, por exemplo, experiência profissional, conquistas de um projeto, etc. O shortcode `timeline` depende do sub-shortcode `timelineItem` para definir cada item dentro da linha do tempo principal. Cada item pode ter as seguintes propriedades.
+O `timeline` cria uma linha temporal visual que pode ser utilizada em diferentes casos de uso, por exemplo, experiência profissional, conquistas de um projeto, etc. O shortcode `timeline` depende do sub-shortcode `timelineItem` para definir cada item dentro da linha temporal principal. Cada item pode ter as seguintes propriedades.
 
 <!-- prettier-ignore-start -->
 | Parâmetro   | Descrição                                  |
 | ----------- | -------------------------------------------- |
 | `md`        | Renderizar o conteúdo como Markdown (true/false)  |
-| `icon`      | O ícone a ser usado nos visuais da linha do tempo  |
+| `icon`      | O ícone a utilizar nos visuais da linha temporal  |
 | `header`    | Cabeçalho para cada entrada                        |
 | `badge`     | Texto para colocar dentro do badge superior direito     |
 | `subheader` | Subcabeçalho da entrada                            |
@@ -837,7 +837,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. D
 {{</* /timelineItem */>}}
 
 
-{{</* timelineItem icon="code" header="Outro ótimo cabeçalho" badge="data - presente" subheader="Ótimo subcabeçalho" */>}}
+{{</* timelineItem icon="code" header="Outro excelente cabeçalho" badge="data - presente" subheader="Excelente subcabeçalho" */>}}
 Com código HTML
 <ul>
   <li>Café</li>
@@ -846,7 +846,7 @@ Com código HTML
 </ul>
 {{</* /timelineItem */>}}
 
-{{</* timelineItem icon="star" header="Shortcodes" badge="INCRÍVEL" */>}}
+{{</* timelineItem icon="star" header="Shortcodes" badge="FANTÁSTICO" */>}}
 Com outros shortcodes
 {{</* gallery */>}}
   <img src="gallery/01.jpg" class="grid-w33" />
@@ -859,7 +859,7 @@ Com outros shortcodes
 {{</* /gallery */>}}
 {{</* /timelineItem */>}}
 
-{{</* timelineItem icon="code" header="Outro ótimo cabeçalho"*/>}}
+{{</* timelineItem icon="code" header="Outro excelente cabeçalho"*/>}}
 {{</* github repo="nunocoracao/blowfish" */>}}
 {{</* /timelineItem */>}}
 
@@ -902,22 +902,22 @@ Com outros shortcodes
 
 ## TypeIt
 
-[TypeIt](https://www.typeitjs.com) é a ferramenta JavaScript mais versátil para criar efeitos de máquina de escrever no planeta. Com uma configuração simples, permite que você digite strings simples ou múltiplas que fazem quebras de linha, apagam e substituem umas às outras, e pode até lidar com strings que contêm HTML complexo.
+[TypeIt](https://www.typeitjs.com) é a ferramenta JavaScript mais versátil para criar efeitos de máquina de escrever no planeta. Com uma configuração simples, permite-lhe digitar strings simples ou múltiplas que fazem quebras de linha, apagam e substituem umas às outras, e pode até lidar com strings que contêm HTML complexo.
 
-O Blowfish implementa um subconjunto das funcionalidades do TypeIt usando um `shortcode`. Escreva seu texto dentro do shortcode `typeit` e use os seguintes parâmetros para configurar o comportamento desejado.
+O Blowfish implementa um subconjunto das funcionalidades do TypeIt utilizando um `shortcode`. Escreva o seu texto dentro do shortcode `typeit` e utilize os seguintes parâmetros para configurar o comportamento desejado.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição |
 | --- | --- |
-| `tag` | [String] Tag `html` que será usada para renderizar as strings. |
+| `tag` | [String] Tag `html` que será utilizada para renderizar as strings. |
 | `classList` | [String] Lista de classes `css` para aplicar ao elemento `html`. |
 | `initialString` | [String] String inicial que aparecerá escrita e será substituída. |
 | `speed` | [number] Velocidade de digitação, medida em milissegundos entre cada passo. |
-| `lifeLike` | [boolean] Torna o ritmo de digitação irregular, como se uma pessoa real estivesse fazendo. |
+| `lifeLike` | [boolean] Torna o ritmo de digitação irregular, como se uma pessoa real estivesse a fazer. |
 | `startDelay` | [number] A quantidade de tempo antes do plugin começar a digitar após ser inicializado. |
 | `breakLines` | [boolean] Se múltiplas strings são impressas uma sobre a outra (true), ou se são apagadas e substituídas umas pelas outras (false). |
-| `waitUntilVisible` | [boolean] Determina se a instância começará quando carregada ou apenas quando o elemento alvo se tornar visível no viewport. O padrão é `true` |
-| `loop` | [boolean] Se suas strings serão continuamente repetidas após a conclusão |
+| `waitUntilVisible` | [boolean] Determina se a instância começará quando carregada ou apenas quando o elemento alvo se tornar visível no viewport. A predefinição é `true` |
+| `loop` | [boolean] Se as suas strings serão continuamente repetidas após a conclusão |
 
 <!-- prettier-ignore-end -->
 
@@ -962,9 +962,9 @@ consectetur adipiscing elit.
   breakLines=false
   loop=true
 */>}}
-"Francamente, minha querida, eu não dou a mínima." E o Vento Levou (1939)
-"Vou fazer uma oferta que ele não pode recusar." O Poderoso Chefão (1972)
-"Toto, tenho a sensação de que não estamos mais no Kansas." O Mágico de Oz (1939)
+"Francamente, minha querida, não quero saber." E Tudo o Vento Levou (1939)
+"Vou fazer-lhe uma oferta que ele não pode recusar." O Padrinho (1972)
+"Toto, tenho a sensação de que já não estamos no Kansas." O Feiticeiro de Oz (1939)
 {{</* /typeit */>}}
 ```
 
@@ -983,29 +983,29 @@ consectetur adipiscing elit.
 
 ## Video
 
-Blowfish inclui um shortcode `video` para incorporar vídeos locais ou externos no conteúdo. O shortcode renderiza um contêiner `<figure>` com um player de vídeo responsivo e uma legenda opcional.
+Blowfish inclui um shortcode `video` para incorporar vídeos locais ou externos no conteúdo. O shortcode renderiza um contentor `<figure>` com um player de vídeo responsivo e uma legenda opcional.
 
 O shortcode `video` aceita os seguintes parâmetros:
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição |
 | --- | --- |
-| `src` | **Obrigatório.** URL do vídeo ou caminho local. Ordem de busca local: recurso da página → `assets/` → `static/`. |
-| `poster` | Imagem de pôster opcional (URL ou caminho local). Se omitida, o shortcode tenta uma imagem com o mesmo nome no bundle da página. |
-| `caption` | Legenda opcional em Markdown exibida abaixo do vídeo. |
+| `src` | **Obrigatório.** URL do vídeo ou caminho local. Ordem de pesquisa local: recurso da página → `assets/` → `static/`. |
+| `poster` | Imagem de póster opcional (URL ou caminho local). Se omitida, o shortcode tenta uma imagem com o mesmo nome no bundle da página. |
+| `caption` | Legenda opcional em Markdown apresentada abaixo do vídeo. |
 | `autoplay` | `true`/`false`. Ativa a reprodução automática quando `true`. Padrão: `false`. |
 | `loop` | `true`/`false`. Reproduz em loop quando `true`. Padrão: `false`. |
 | `muted` | `true`/`false`. Silencia quando `true`. Padrão: `false`. |
-| `controls` | `true`/`false`. Mostra os controles de reprodução padrão do navegador quando `true`. Padrão: `true`. |
+| `controls` | `true`/`false`. Mostra os controlos de reprodução padrão do navegador quando `true`. Padrão: `true`. |
 | `playsinline` | `true`/`false`. Reprodução inline em dispositivos móveis quando `true`. Padrão: `true`. |
-| `preload` | `metadata` (carrega informações), `none` (economiza banda) ou `auto` (pré-carrega mais). Padrão: `metadata`. |
+| `preload` | `metadata` (carrega informações), `none` (poupa largura de banda) ou `auto` (pré-carrega mais). Padrão: `metadata`. |
 | `start` | Tempo de início opcional em segundos. |
 | `end` | Tempo de fim opcional em segundos. |
 | `ratio` | Proporção reservada para o player. Suporta `16/9`, `4/3`, `1/1` ou `W/H` personalizado. Padrão: `16/9`. |
 | `fit` | Como o vídeo se ajusta à proporção: `contain` (sem corte), `cover` (corta para preencher), `fill` (estica). Padrão: `contain`. |
 <!-- prettier-ignore-end -->
 
-Se o navegador não puder reproduzir o vídeo, o player exibirá uma mensagem mínima em inglês com um link para download.
+Se o navegador não conseguir reproduzir o vídeo, o player apresentará uma mensagem mínima em inglês com um link de download.
 
 **Exemplo:**
 
@@ -1013,7 +1013,7 @@ Se o navegador não puder reproduzir o vídeo, o player exibirá uma mensagem m�
 {{</* video
     src="https://upload.wikimedia.org/wikipedia/commons/5/5a/CC0_-_Public_Domain_Dedication_video_bumper.webm"
     poster="https://upload.wikimedia.org/wikipedia/commons/e/e0/CC0.jpg"
-    caption="**Demo de domínio público** — vídeo e pôster CC0."
+    caption="**Demo de domínio público** — vídeo e póster CC0."
     loop=true
     muted=true
 */>}}
@@ -1022,7 +1022,7 @@ Se o navegador não puder reproduzir o vídeo, o player exibirá uma mensagem m�
 {{< video
   src="https://upload.wikimedia.org/wikipedia/commons/5/5a/CC0_-_Public_Domain_Dedication_video_bumper.webm"
   poster="https://upload.wikimedia.org/wikipedia/commons/e/e0/CC0.jpg"
-  caption="**Demo de domínio público** — vídeo e pôster CC0."
+  caption="**Demo de domínio público** — vídeo e póster CC0."
   loop=true
   muted=true
 >}}
@@ -1031,14 +1031,14 @@ Se o navegador não puder reproduzir o vídeo, o player exibirá uma mensagem m�
 
 ## Youtube Lite
 
-Um atalho para incorporar vídeos do YouTube usando a biblioteca [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed). Esta biblioteca é uma alternativa leve aos embeds padrão do YouTube, e é projetada para ser mais rápida e eficiente.
+Um atalho para incorporar vídeos do YouTube utilizando a biblioteca [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed). Esta biblioteca é uma alternativa leve aos embeds padrão do YouTube, e foi concebida para ser mais rápida e eficiente.
 
 <!-- prettier-ignore-start -->
 | Parâmetro | Descrição                                  |
 | --------- | -------------------------------------------- |
 | `id`      | [String] ID do vídeo do YouTube para incorporar.          |
 | `label`   | [String] Rótulo para o vídeo                 |
-| `params`  | [String] Parâmetros extras para reprodução do vídeo |
+| `params`  | [String] Parâmetros extra para reprodução do vídeo |
 <!-- prettier-ignore-end -->
 
 **Exemplo 1:**
@@ -1051,7 +1051,7 @@ Um atalho para incorporar vídeos do YouTube usando a biblioteca [lite-youtube-e
 
 **Exemplo 2:**
 
-Você pode usar todos os [parâmetros do player](https://developers.google.com/youtube/player_parameters#Parameters) do YouTube para a variável `params`, como demonstrado abaixo:
+Pode utilizar todos os [parâmetros do player](https://developers.google.com/youtube/player_parameters#Parameters) do YouTube para a variável `params`, como demonstrado abaixo:
 
 > Este vídeo começará após 130 segundos (2m10)
 
@@ -1059,9 +1059,9 @@ Você pode usar todos os [parâmetros do player](https://developers.google.com/y
 {{</* youtubeLite id="SgXhGb-7QbU" label="Demo do Blowfish-tools" params="start=130" */>}}
 ```
 
-> Este vídeo não terá controles de interface, começará a 130 segundos e parará 10 segundos depois.
+> Este vídeo não terá controlos de interface, começará aos 130 segundos e parará 10 segundos depois.
 
-Para concatenar múltiplas opções como mostrado abaixo, você precisa adicionar o caractere `&` entre elas.
+Para concatenar múltiplas opções como mostrado abaixo, precisa de adicionar o caractere `&` entre elas.
 
 ```md
 {{</* youtubeLite id="SgXhGb-7QbU" label="Demo do Blowfish-tools" params="start=130&end=10&controls=0" */>}}
@@ -1069,4 +1069,4 @@ Para concatenar múltiplas opções como mostrado abaixo, você precisa adiciona
 
 {{< youtubeLite id="SgXhGb-7QbU" label="Blowfish-tools demo" params="start=130&end=10&controls=0" >}}
 
-Mais informações podem ser encontradas no [repo do GitHub do youtubeLite](https://github.com/paulirish/lite-youtube-embed/blob/master/readme.md#custom-player-parameters) e na página de [parâmetros do player](https://developers.google.com/youtube/player_parameters#Parameters) do YouTube.
+Mais informações podem ser encontradas no [repositório GitHub do youtubeLite](https://github.com/paulirish/lite-youtube-embed/blob/master/readme.md#custom-player-parameters) e na página de [parâmetros do player](https://developers.google.com/youtube/player_parameters#Parameters) do YouTube.
