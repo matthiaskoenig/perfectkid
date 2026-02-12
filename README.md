@@ -17,6 +17,7 @@ hugo
 ```
 
 ## Technology
+- Hugo & Blowfusg
 - Tailwind CSS 3.0
 
 
@@ -27,7 +28,7 @@ https://gohugo.io/installation/
 https://github.com/gohugoio/hugo/releases
 ```bash
 wget https://github.com/gohugoio/hugo/releases/download/v0.155.3/hugo_extended_0.155.3_linux-amd64.deb
-sudo dpkg -i hugo_extended_0.155.3_linux-amd64.de
+sudo dpkg -i hugo_extended_0.155.3_linux-amd64.deb
 ```
 
 ```bash
@@ -38,9 +39,13 @@ hugo version
 [Blowfish](https://blowfish.page/docs/)
 
 ```bash
-sudo apt -y install blowfish-tools
+sudo apt -y install npm
 npx blowfish-tools
 ```
+
+## Documentation
+- Icons: https://blowfish.page/samples/icons/
+
 
 ## License
 

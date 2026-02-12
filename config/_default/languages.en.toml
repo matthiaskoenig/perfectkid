@@ -9,3 +9,17 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
+
+  [params.author]
+  links = [ ]
+
+["params.author"]
+name = "PERFECT-KID"
+email = "konigmatt@googlemail.com"
+image = "img/PERFECT-KID_logo.png"
+headline = "Shaping the Future of Precision Kidney Transplant Care."
+bio = "Matthias König is a computational systems biologist specializing in digital twins, physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) modeling, and precision medicine. He leads research at the interface of mechanistic modeling, data science, and clinical translation, with a focus on liver and kidney function. He develops interoperable, reproducible digital twin frameworks for personalized healthcare. His work integrates multi-scale modeling, real-world clinical data, and open-science standards to enable predictive and patient-specific decision support in transplantation and metabolic disease."
+links = [
+  { github = "https://github.com/matthiaskoenig" },
+  { linkedin = "https://www.linkedin.com/in/matthias-koenig/" },
+]
