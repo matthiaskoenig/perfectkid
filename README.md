@@ -11,6 +11,15 @@ Start the development server.
 hugo server
 ```
 
+## Deployment
+```bash
+hugo
+```
+
+## Technology
+- Tailwind CSS 3.0
+
+
 ## Installation
 
 ### Install HUGO
